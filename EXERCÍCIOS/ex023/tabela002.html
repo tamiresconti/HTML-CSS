@@ -15,6 +15,13 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
@@ -33,6 +40,13 @@
         td.num {
             text-align: right;
         }
+        
+        tbody > tr:nth-child(odd) {
+            background-color: lightcoral;
+        }
+        tbody > tr:nth-child(even) {
+            background-color: lightblue;
+        }
     </style>
 </head>
 <body>
@@ -44,10 +58,11 @@
     Tfoot (tr, td, th)-->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -163,7 +178,7 @@
 
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>214,3 milhões</strong> </td>
             </tr>
         </tfoot>
